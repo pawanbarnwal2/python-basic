@@ -1,13 +1,15 @@
-# print("Enter input")
+class Account:
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
 
-# name = input("Enter Input name")
+    def deposit(self, amount):
+        self.balance += amount
 
-# print(name + "Correct name")
+    def withdraw(self, amount):
+        self.balance -= amount
 
-# print(name[1:3])
-
-nam=[1,2,3,44]
-i=0;
-while i<= len(nam)-1:
-	print(nam[i])
-	i+=1
+acc = Account("Arun python class", 5000)
+acc.deposit(1000)
+acc.withdraw(2000)
+print(acc.balance)
